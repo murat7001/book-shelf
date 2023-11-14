@@ -1,6 +1,7 @@
 import {
   Button,
   Grid,
+  Stack,
 } from '@mui/material';
 import axios from 'axios';
 import Link from 'next/link';
@@ -10,9 +11,9 @@ import Item from '@/components/Item';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark', // Temayı karanlık modda kullanmak için
+    mode: 'dark', 
     background: {
-      default: '#000000', // Arka plan rengi: siyah
+      default: '#000000', 
     },
   },
 });
@@ -33,17 +34,15 @@ const Home = () => {
     <>
       <ThemeProvider theme={theme}>
       
-        <Link href="/add-book">
-          <Button variant='contained'>Add Book</Button>
-        </Link>
-        <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
-          {books &&
-            books.map((book) => (
-              <Grid item key={book.id} xs={12} sm={6} md={4}>
-                <Item book={book}></Item>
-              </Grid>
-            ))}
-        </Grid>
+        
+        <Stack width={"90%"} margin={"auto"} container spacing={3} direction={"row"} justifyContent="space-around" useFlexGap   >
+        {books &&
+          books.map((book) => (
+            <Grid width={500}  item key={book.id} xs={12} sm={6} md={4}>
+              <Item book={book}></Item>
+            </Grid>
+          ))}
+      </Stack>
       </ThemeProvider>
 
     </>
