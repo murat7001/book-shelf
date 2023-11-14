@@ -1,16 +1,21 @@
 import {
   Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
   Grid,
-  Typography,
 } from '@mui/material';
 import axios from 'axios';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
+import Item from '@/components/Item';
+
+const theme = createTheme({
+  palette: {
+    mode: 'dark', // Temayı karanlık modda kullanmak için
+    background: {
+      default: '#000000', // Arka plan rengi: siyah
+    },
+  },
+});
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -25,54 +30,23 @@ const Home = () => {
   }, []);
 
   return (
-    <Grid container spacing={2}>
-      <Link href="/add-book">
-        <Button variant="contained" color="primary">
-          Add Book
-        </Button>
-      </Link>
-      {books &&
-        books.map((book) => (
-          <Grid item key={book.id} xs={12} sm={6} md={4}>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={book.imageUrl ?? 'https://picsum.photos/200/300'}
-                  alt={book.title}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {book.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {book.description}...
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link
-                    href={`/books/${book.id}`}
-                    style={{ textDecoration: 'none' }}
-                  >
-                    <Button variant="contained" size="small">
-                      Details
-                    </Button>
-                  </Link>
-                  <Link
-                    href={`/edit-books/${book.id}`}
-                    style={{ textDecoration: 'none' }}
-                  >
-                    <Button variant="outlined" size="small">
-                      Edit
-                    </Button>
-                  </Link>
-                </CardActions>
-              </CardActionArea>
-            </Card>
-          </Grid>
-        ))}
-    </Grid>
+    <>
+      <ThemeProvider theme={theme}>
+      
+        <Link href="/add-book">
+          <Button variant='contained'>Add Book</Button>
+        </Link>
+        <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
+          {books &&
+            books.map((book) => (
+              <Grid item key={book.id} xs={12} sm={6} md={4}>
+                <Item book={book}></Item>
+              </Grid>
+            ))}
+        </Grid>
+      </ThemeProvider>
+
+    </>
   );
 };
 
