@@ -42,22 +42,20 @@ const Home = () => {
     <>
 
     <ThemeProvider theme={theme}>
-      <Link href="/add-book">
-        <Button variant='contained'>Add Book</Button>
-      </Link>
       {deleteMessage && (
         <div style={{ color: 'green', marginTop: '10px' }}>
           {deleteMessage}
         </div>
       )}
-      <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
+      
+      <Stack width={"90%"} margin={"auto"} container spacing={3} direction={"row"} justifyContent="space-around" useFlexGap   >
         {books &&
           books.map((book) => (
-            <Grid item key={book.id} xs={12} sm={6} md={4}>
-              <Item book={book} onDelete={onDelete}></Item>
+            <Grid width={500}  item key={book.id} xs={12} sm={6} md={4}>
+              <Item onDelete={onDelete} book={book}></Item>
             </Grid>
           ))}
-      </Grid>
+      </Stack>
     </ThemeProvider>
   </>
 
