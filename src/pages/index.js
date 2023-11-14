@@ -1,6 +1,7 @@
 import {
   Button,
   Grid,
+  Stack,
 } from '@mui/material';
 import axios from 'axios';
 import Link from 'next/link';
@@ -10,9 +11,9 @@ import Item from '@/components/Item';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark', // Temayı karanlık modda kullanmak için
+    mode: 'dark',
     background: {
-      default: '#000000', // Arka plan rengi: siyah
+      default: '#000000',
     },
   },
 });
@@ -39,6 +40,7 @@ const Home = () => {
 
   return (
     <>
+
     <ThemeProvider theme={theme}>
       <Link href="/add-book">
         <Button variant='contained'>Add Book</Button>
@@ -58,6 +60,7 @@ const Home = () => {
       </Grid>
     </ThemeProvider>
   </>
+
   );
 };
 

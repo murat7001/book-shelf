@@ -1,4 +1,3 @@
-
 import {
   Typography,
   Button,
@@ -30,6 +29,7 @@ const Item = ({ book, onDelete }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
+      <div style={{ flexGrow: 1 }} /> {/* Boşluk ekleyerek aşağıya itme işlemi */}
       <CardActions>
         <MuiLink href={`/books/${book.id}`} underline="none">
           <Button variant="contained" size="small">
