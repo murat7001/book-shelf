@@ -19,6 +19,7 @@ const theme = createTheme({
 
 const Home = () => {
   const [books, setBooks] = useState([]);
+  const [deleteMessage, setDeleteMessage] = useState(null);
 
   useEffect(() => {
     axios
@@ -28,25 +29,35 @@ const Home = () => {
       })
       .catch((error) => console.error('error :>> ', error));
   }, []);
+  const onDelete = (deletedId) => {
+    setBooks((prevBooks) => prevBooks.filter((book) => book.id !== deletedId));
+    setDeleteMessage('Book successfully deleted!');
+    setTimeout(() => {
+      setDeleteMessage(null);
+    }, 3000); // Mesajı 3 saniye sonra kaldır
+  };
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-      
-        <Link href="/add-book">
-          <Button variant='contained'>Add Book</Button>
-        </Link>
-        <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
-          {books &&
-            books.map((book) => (
-              <Grid item key={book.id} xs={12} sm={6} md={4}>
-                <Item book={book}></Item>
-              </Grid>
-            ))}
-        </Grid>
-      </ThemeProvider>
-
-    </>
+    <ThemeProvider theme={theme}>
+      <Link href="/add-book">
+        <Button variant='contained'>Add Book</Button>
+      </Link>
+      {deleteMessage && (
+        <div style={{ color: 'green', marginTop: '10px' }}>
+          {deleteMessage}
+        </div>
+      )}
+      <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
+        {books &&
+          books.map((book) => (
+            <Grid item key={book.id} xs={12} sm={6} md={4}>
+              <Item book={book} onDelete={onDelete}></Item>
+            </Grid>
+          ))}
+      </Grid>
+    </ThemeProvider>
+  </>
   );
 };
 
