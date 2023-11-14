@@ -8,8 +8,9 @@ import {
   CardMedia,
   Link as MuiLink,
 } from '@mui/material';
+import BasicModal from './BasicModal';
 
-const Item = ({ book }) => {
+const Item = ({ book, onDelete }) => {
   return (
     <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <CardActionArea>
@@ -40,6 +41,7 @@ const Item = ({ book }) => {
             Edit
           </Button>
         </MuiLink>
+        <BasicModal id={book.id} onDelete={onDelete}></BasicModal>
       </CardActions>
     </Card>
   );

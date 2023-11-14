@@ -2,7 +2,7 @@
   "books": [
     {
       "id": 1,
-      "title": "Harry Potter and the Sorcerer's stone",
+      "title": "Harry Potter and the Sorcerer's Stone",
       "author": "J.K. Rowling",
       "price": 19.99,
       "currency": "USD",
@@ -11,21 +11,21 @@
     },
     {
       "id": 2,
-      "title": "The Lord of the Rings",
-      "author": "J.R.R. Tolkien",
-      "price": 39.99,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 15.99,
       "currency": "USD",
-      "description": "The Lord of the Rings is an epic high fantasy novel written by English author and scholar J. R. R. Tolkien. The story began as a sequel to Tolkien's 1937 fantasy novel The Hobbit, but eventually developed into a much larger work.",
-      "imageUrl": null
+      "description": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It is a classic of modern American literature. The novel is renowned for its warmth and humor, despite dealing with the serious issues of rape and racial inequality.",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51UoqRAxwEL._SX331_BO1,204,203,200_.jpg"
     },
     {
       "id": 3,
-      "title": "222",
-      "author": "author",
-      "description": "description description description descriptiondescription description description description",
-      "currency": "TRY",
-      "price": "39.99",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg"
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 12.99,
+      "currency": "USD",
+      "description": "The Great Gatsby is a novel written by American author F. Scott Fitzgerald that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922.",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51UoqRAxwEL._SX331_BO1,204,203,200_.jpg"
     }
   ],
   "posts": [
