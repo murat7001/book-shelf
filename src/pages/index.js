@@ -11,9 +11,9 @@ import Item from '@/components/Item';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark', 
+    mode: 'dark',
     background: {
-      default: '#000000', 
+      default: '#000000',
     },
   },
 });
@@ -33,23 +33,19 @@ const Home = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-      <Link href="/add-book">
-        <Button variant='contained'>Add Book</Button>
-      </Link>
-      {deleteMessage && (
-        <div style={{ color: 'green', marginTop: '10px' }}>
-          {deleteMessage}
-        </div>
-      )}
-      <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
-        {books &&
-          books.map((book) => (
-            <Grid item key={book.id} xs={12} sm={6} md={4}>
-              <Item book={book} onDelete={onDelete}></Item>
-            </Grid>
-          ))}
-      </Grid>
-    </ThemeProvider>
+
+        <Link href="/add-book">
+          <Button variant='contained'>Add Book</Button>
+        </Link>
+        <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
+          {books &&
+            books.map((book) => (
+              <Grid item key={book.id} xs={12} sm={6} md={4}>
+                <Item book={book}></Item>
+              </Grid>
+            ))}
+        </Grid>
+      </ThemeProvider>
 
     </>
   );
