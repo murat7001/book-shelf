@@ -38,7 +38,7 @@ const Search= ({ setBooks })=> {
         fetchBookData();
     }, []);
     return (
-        <Stack alignItems={"flex-start"} direction="row" spacing={2} >
+        <Stack padding={'20px'} width={'90%'} margin={'auto'} alignItems={"flex-start"} direction="row" spacing={2} >
             <FormControl color='info' size="small" sx={{ width: '150px' }} variant='standard'>
                 <InputLabel id="demo-simple-select-label">SearchBy</InputLabel>
                 <Select

@@ -23,21 +23,22 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <style>{`
-          body {
-            
-            margin: 0;
-            padding:0;
-            background-color: #F4E3B2; /* Arka plan rengini buradan değiştirebilirsiniz */
-            /* Diğer stil ayarları */
-          }
-        `}</style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F4E3B2;
+    }
+    a:-webkit-any-link {
+      text-decoration: none; /* Corrected syntax */
+    }
+  `}</style>
       </Head>
       <Layout>
-          <Component {...pageProps} />
+        <Component {...pageProps} />
       </Layout>
-      
-      
-      
+
+
+
     </>
   );
 }

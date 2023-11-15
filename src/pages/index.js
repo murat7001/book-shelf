@@ -26,7 +26,7 @@ const Home = () => {
     setDeleteMessage('Book successfully deleted!');
     setTimeout(() => {
       setDeleteMessage(null);
-    }, 3000); // Mesajı 3 saniye sonra kaldır
+    }, 3000); 
   };
 
   return (
@@ -38,7 +38,7 @@ const Home = () => {
           </div>
         )}
 
-        <Stack width={"90%"} margin={"auto"} container spacing={3} direction={"row"} justifyContent="space-around" useFlexGap   >
+        <Stack width={"90%"} margin={"auto"}  spacing={3} direction={"row"} justifyContent="space-around" useFlexGap   >
           {books &&
             books.map((book) => (
               <Grid width={500} item key={book.id} xs={12} sm={6} md={4}>
