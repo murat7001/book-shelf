@@ -8,7 +8,9 @@ import {
   Select,
   Stack,
   TextField,
+  ThemeProvider,
   Typography,
+  createTheme,
 } from '@mui/material';
 import axios from 'axios';
 import { useFormik } from 'formik';
@@ -33,6 +35,7 @@ const EditBook = () => {
   const router = useRouter();
   const { id } = router.query;
   const [loading, setLoading] = useState(false);
+
 
   const formik = useFormik({
     initialValues: {
@@ -80,8 +83,9 @@ const EditBook = () => {
   //     return <CircularProgress />;
   //   }
   return (
-    <Container>
-      <Stack spacing={2}>
+
+      <Container >
+      <Stack color={"secondary"} spacing={2}>
         <Typography variant="h4" component="h1">
           Edit Book
           <form onSubmit={formik.handleSubmit}>
@@ -159,6 +163,9 @@ const EditBook = () => {
                 error={formik.touched.price && Boolean(formik.errors.price)}
                 helperText={formik.touched.price && formik.errors.price}
                 onBlur={formik.handleBlur}
+                InputProps={{ // Set input text color
+                  sx: { color: 'black' }
+                }}
               />
             </Stack>
             <TextField
@@ -179,6 +186,7 @@ const EditBook = () => {
         </Typography>
       </Stack>
     </Container>
+    
   );
 };
 

@@ -1,16 +1,7 @@
 {
   "books": [
     {
-      "id": 2,
-      "title": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "price": 15.99,
-      "currency": "USD",
-      "description": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It is a classic of modern American literature. The novel is renowned for its warmth and humor, despite dealing with the serious issues of rape and racial inequality.",
-      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51UoqRAxwEL._SX331_BO1,204,203,200_.jpg"
-    },
-    {
-      "id": 3,
+      "id": 1,
       "title": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "price": 12.99,
@@ -38,7 +29,7 @@
     }
   ],
   "posts": [
-    {
+    { 
       "id": 1,
       "title": "json-server",
       "author": "typicode"
