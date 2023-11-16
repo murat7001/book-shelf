@@ -11,25 +11,25 @@ Run json server: json-server --watch db.json --port 3001
 * Material UI
 
 ## HOME
-![](https://github.com/murat7001/book-shelf/tree/main/src/image/home.png)
+![](https://github.com/murat7001/book-shelf/blob/main/src/image/home.png)
 
 ## ADD
-![](https://github.com/murat7001/book-shelf/tree/main/src/image/add.png)
+![](https://github.com/murat7001/book-shelf/blob/main/src/image/add.png)
 
 ## DELETE
-![](https://github.com/murat7001/book-shelf/tree/main/src/image/delete.png)
+![](https://github.com/murat7001/book-shelf/blob/main/src/image/delete.png)
 
 ## EDIT
-![](https://github.com/murat7001/book-shelf/tree/main/src/image/edit.png)
+![](https://github.com/murat7001/book-shelf/blob/main/src/image/edit.png)
 
 ## DETAIL
-![](https://github.com/murat7001/book-shelf/tree/main/src/image/detail.png)
+![](https://github.com/murat7001/book-shelf/blob/main/src/image/detail.png)
 
 ## SIGNIN
-![](https://github.com/murat7001/book-shelf/tree/main/src/image/signin.png)
+![](https://github.com/murat7001/book-shelf/blob/main/src/image/signin.png)
 
 ## SIGNUP
-![](https://github.com/murat7001/book-shelf/tree/main/src/image/signUP.png)
+![](https://github.com/murat7001/book-shelf/blob/main/src/image/signup.png)
 
 
 
