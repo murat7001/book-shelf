@@ -1,7 +1,11 @@
 # NEXT.JS BOOK-SHELF APP 
 
 You can review the Json server [here](https://github.com/typicode/json-server#plural-routes).
-Run json server: json-server --watch db.json --port 3001
+## Start
+- cd book-shelf
+- npm install
+- Run json server: json-server --watch db.json --port 3001
+- npm run dev
 
 ## TOOLS USED
 * Axios
